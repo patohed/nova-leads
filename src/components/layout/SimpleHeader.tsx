@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Zap } from "lucide-react";
+import React from "react";
+import { Zap } from "lucide-react";
 
 const SimpleHeader = () => {
   return (
