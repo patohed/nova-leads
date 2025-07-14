@@ -3,8 +3,8 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "NovaLeads - Agencia de Generación de Leads",
-  description: "Agencia especializada en generación de leads con IA y marketing digital",
+  title: "Agencia Nova - Marketing Digital que Convierte",
+  description: "Agencia de marketing digital especializada en estrategias que impulsan tu crecimiento y convierten visitantes en clientes",
 };
 
 export default function RootLayout({

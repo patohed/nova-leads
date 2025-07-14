@@ -19,8 +19,8 @@ import StatsWidget from "@/components/ui/StatsWidget";
 
 const Footer = () => {
   const contactInfo = {
-    email: "contacto@novaleads.com.ar",
-    emailSecondary: "leads@novaleads.com.ar",
+    email: "contacto@agencianova.com.ar",
+    emailSecondary: "hola@agencianova.com.ar",
     phone: "+54 11 4567-8900",
     whatsapp: "+54 9 11 4567-8900",
     address: "Av. Santa Fe 1234, Piso 8°, C1059 CABA, Buenos Aires, Argentina"
@@ -199,15 +199,17 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="flex items-center space-x-2 mb-4">
-                <Zap className="h-8 w-8 text-blue-400" />
-                <span className="font-bold text-xl bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-                  NovaLeads
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                  <Zap className="h-6 w-6 text-white" />
+                </div>
+                <span className="font-bold text-xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Agencia Nova
                 </span>
               </div>
               <p className="text-gray-300 text-sm mb-4">
-                Especialistas en transformar datos en crecimiento exponencial. Generamos leads calificados que convierten, 
-                optimizamos campañas que escalan y entregamos resultados medibles para acelerar tu negocio.
+                Somos una agencia de marketing digital especializada en estrategias que convierten. 
+                Creamos campañas personalizadas, optimizamos procesos y entregamos resultados medibles para impulsar tu crecimiento.
               </p>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
@@ -283,7 +285,7 @@ const Footer = () => {
           <div className="container mx-auto px-4 lg:px-6">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 text-sm">
-                © 2025 NovaLeads. Todos los derechos reservados.
+                © 2025 Agencia Nova. Todos los derechos reservados.
               </p>
               <div className="flex space-x-6 mt-4 md:mt-0">
                 <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">

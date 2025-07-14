@@ -70,13 +70,13 @@ const About = () => {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             ¿Por qué elegir{" "}
-            <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
-              NovaLeads?
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Agencia Nova?
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            No somos una agencia más. Somos especialistas en transformar datos en crecimiento exponencial. 
-            Nuestro enfoque único combina inteligencia artificial, análisis predictivo y estrategias probadas.
+            No somos una agencia más. Somos especialistas en marketing digital que transforman estrategias en resultados exponenciales. 
+            Nuestro enfoque único combina creatividad, datos y tecnología para acelerar tu crecimiento.
           </p>
         </motion.div>
 

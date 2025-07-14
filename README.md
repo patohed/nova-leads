@@ -1,6 +1,6 @@
-# NovaLeads - Lead Generation Agency Website
+# Agencia Nova - Marketing Digital Agency Website
 
-A modern, responsive React website for a lead generation agency built with cutting-edge technologies. This website showcases performance marketing services, AI-powered lead generation, and data-driven marketing automation solutions.
+A modern, responsive React website for a digital marketing agency built with cutting-edge technologies. This website showcases comprehensive marketing services, growth strategies, and data-driven digital solutions.
 
 ## 🚀 Features
 

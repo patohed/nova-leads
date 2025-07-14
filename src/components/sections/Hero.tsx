@@ -17,53 +17,53 @@ const Hero = () => {
   const stats = [
     { 
       value: "+340%", 
-      label: "Crecimiento de Leads", 
+      label: "Crecimiento Promedio", 
       icon: <TrendingUp className="w-5 h-5" />,
-      description: "Promedio de crecimiento en leads cualificados obtenido por nuestros clientes en los primeros 3 meses",
+      description: "Aumento promedio en ventas obtenido por nuestros clientes en los primeros 6 meses",
       trend: "up",
-      trendValue: "+15% vs mes anterior"
+      trendValue: "+20% vs período anterior"
     },
     { 
-      value: "2,500+", 
-      label: "Leads Mensuales", 
+      value: "150+", 
+      label: "Campañas Exitosas", 
       icon: <Users className="w-5 h-5" />,
-      description: "Leads cualificados generados mensualmente para nuestros clientes activos",
+      description: "Campañas de marketing digital ejecutadas con resultados medibles y exitosos",
       trend: "up",
-      trendValue: "+8% vs mes anterior"
+      trendValue: "+12% vs trimestre anterior"
     },
     { 
-      value: "85%", 
-      label: "Tasa de Conversión", 
+      value: "95%", 
+      label: "Satisfacción Cliente", 
       icon: <Trophy className="w-5 h-5" />,
-      description: "Porcentaje promedio de conversión de leads a clientes finales",
+      description: "Porcentaje de clientes que renuevan nuestros servicios y recomiendan la agencia",
       trend: "stable",
-      trendValue: "Mantiene promedio"
+      trendValue: "Consistente en el tiempo"
     },
   ];
 
   const benefits = [
     {
-      title: "Leads calificados desde el día 1",
-      description: "Implementamos estrategias de segmentación avanzada que nos permiten identificar y atraer a tu cliente ideal desde el primer día de campaña."
+      title: "Estrategias personalizadas",
+      description: "Desarrollamos estrategias de marketing digital únicas para tu negocio, basadas en datos y análisis profundo de tu mercado objetivo."
     },
     {
       title: "ROI positivo garantizado",
       description: "Nuestros clientes ven resultados medibles en las primeras 4 semanas, con un promedio de 3:1 de retorno de inversión."
     },
     {
-      title: "Sin permanencia mínima",
-      description: "Confiamos en nuestros resultados. Puedes pausar o cancelar tu campaña en cualquier momento sin penalizaciones."
+      title: "Soporte continuo",
+      description: "Acompañamiento constante con reportes detallados, optimizaciones semanales y ajustes en tiempo real de tus campañas."
     },
     {
       title: "Auditoría gratuita incluida",
-      description: "Análisis completo de tu funnel actual, competencia y oportunidades de mercado sin costo adicional."
+      description: "Análisis completo de tu presencia digital actual, competencia y oportunidades de mercado sin costo adicional."
     }
   ];
 
   return (
     <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Advanced Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-white to-orange-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50" />
       
       {/* Enhanced geometric background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -134,18 +134,18 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
               >
-                Genera más{" "}
-                <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
-                  leads
+                Impulsa tu{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  marketing
                 </span>
-                {" "}que{" "}
+                {" "}y{" "}
                 <span className="relative">
-                  vendan
+                  vende más
                   <motion.div
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ duration: 1, delay: 1 }}
-                    className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full"
+                    className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
                   />
                 </span>
               </motion.h1>
@@ -156,7 +156,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="text-lg text-gray-600 leading-relaxed max-w-xl"
               >
-                Estrategias de marketing digital que transforman visitantes en clientes reales.
+                Somos tu agencia de marketing digital especializada en estrategias que convierten visitantes en clientes reales y fieles.
               </motion.p>
             </div>
 

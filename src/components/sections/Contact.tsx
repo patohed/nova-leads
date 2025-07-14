@@ -49,10 +49,10 @@ const Contact = () => {
       icon: Mail,
       title: 'Email',
       subtitle: 'Respuesta en 24hs',
-      value: 'hola@novaleads.com',
+      value: 'hola@agencianova.com',
       action: 'Enviar email',
-      color: 'from-red-500 to-orange-500',
-      href: 'mailto:hola@novaleads.com'
+      color: 'from-blue-500 to-purple-500',
+      href: 'mailto:hola@agencianova.com'
     }
   ]
 
