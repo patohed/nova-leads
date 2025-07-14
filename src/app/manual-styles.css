@@ -1,0 +1,39 @@
+/* Tailwind Styles - Manual include for debugging */
+.bg-red-500 { background-color: #ef4444; }
+.bg-blue-600 { background-color: #2563eb; }
+.bg-green-600 { background-color: #16a34a; }
+.bg-purple-600 { background-color: #9333ea; }
+.bg-yellow-500 { background-color: #eab308; }
+.bg-pink-500 { background-color: #ec4899; }
+
+.text-white { color: white; }
+.text-black { color: black; }
+
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+
+.font-bold { font-weight: 700; }
+
+.p-8 { padding: 2rem; }
+.p-6 { padding: 1.5rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+
+.mb-8 { margin-bottom: 2rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+
+.rounded-lg { border-radius: 0.5rem; }
+.rounded { border-radius: 0.25rem; }
+
+.min-h-screen { min-height: 100vh; }
+
+.flex { display: flex; }
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.hover\:bg-yellow-600:hover { background-color: #ca8a04; }
+.hover\:bg-pink-600:hover { background-color: #db2777; }
