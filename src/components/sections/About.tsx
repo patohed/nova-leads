@@ -53,10 +53,6 @@ const About = () => {
     { value: "5 años", label: "Experiencia" }
   ];
 
-  const technologies = [
-    "🔍 Google", "📘 Meta", "💼 LinkedIn", "🎵 TikTok", "📺 YouTube", "🧠 HubSpot"
-  ];
-
   return (
     <section id="nosotros" className="py-20 bg-white">
       <div className="container mx-auto px-4 lg:px-6">
@@ -70,7 +66,7 @@ const About = () => {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             ¿Por qué elegir{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
               Agencia Nova?
             </span>
           </h2>
@@ -143,31 +139,6 @@ const About = () => {
               </Card>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* Technology Partners */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h3 className="text-2xl font-bold mb-6">Somos Partners Certificados de</h3>
-          <div className="flex flex-wrap justify-center items-center gap-6">
-            {technologies.map((tech, index) => (
-              <motion.div
-                key={tech}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 px-4 py-2 rounded-lg text-sm font-medium"
-              >
-                {tech}
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
 
         {/* Technology Advantages */}

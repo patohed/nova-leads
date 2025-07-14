@@ -63,7 +63,7 @@ const Hero = () => {
   return (
     <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Advanced Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-white to-orange-50" />
       
       {/* Enhanced geometric background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -135,7 +135,7 @@ const Hero = () => {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
               >
                 Impulsa tu{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
                   marketing
                 </span>
                 {" "}y{" "}
@@ -145,7 +145,7 @@ const Hero = () => {
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ duration: 1, delay: 1 }}
-                    className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
+                    className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full"
                   />
                 </span>
               </motion.h1>

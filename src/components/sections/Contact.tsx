@@ -51,7 +51,7 @@ const Contact = () => {
       subtitle: 'Respuesta en 24hs',
       value: 'hola@agencianova.com',
       action: 'Enviar email',
-      color: 'from-blue-500 to-purple-500',
+      color: 'from-red-500 to-orange-500',
       href: 'mailto:hola@agencianova.com'
     }
   ]
