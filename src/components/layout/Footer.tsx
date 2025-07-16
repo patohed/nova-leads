@@ -43,10 +43,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "#", label: "Instagram" }
+    { icon: Linkedin, href: "https://linkedin.com/company/agencia-nova", label: "LinkedIn" },
+    { icon: Twitter, href: "https://twitter.com/agencianova", label: "Twitter" },
+    { icon: Facebook, href: "https://facebook.com/agencianova", label: "Facebook" },
+    { icon: Instagram, href: "https://instagram.com/agencianova", label: "Instagram" }
   ];
 
   const reasons = [
@@ -173,7 +173,13 @@ const Footer = () => {
                     ))}
                   </div>
                   <div className="mt-8">
-                    <Button className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white">
+                    <Button 
+                      className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white"
+                      onClick={() => {
+                        const message = encodeURIComponent("¡Hola! Me interesa solicitar el análisis gratuito de Agencia Nova. ¿Podrían ayudarme?");
+                        window.open(`https://wa.me/5491112345678?text=${message}`, '_blank');
+                      }}
+                    >
                       Solicitar Análisis Gratuito
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -216,6 +222,8 @@ const Footer = () => {
                   <a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-400 hover:text-blue-400 transition-colors"
                     aria-label={social.label}
                   >
@@ -236,9 +244,12 @@ const Footer = () => {
               <ul className="space-y-2">
                 {services.map((service) => (
                   <li key={service}>
-                    <a href="#servicios" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                    <button 
+                      onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm text-left"
+                    >
                       {service}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -255,9 +266,22 @@ const Footer = () => {
               <ul className="space-y-2">
                 {company.map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+                    <button 
+                      onClick={() => {
+                        if (item === "Contacto") {
+                          document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+                        } else if (item === "Nosotros") {
+                          document.getElementById('nosotros')?.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                          // Para otros enlaces como Blog y Recursos, ir a WhatsApp
+                          const message = encodeURIComponent(`¡Hola! Me interesa obtener información sobre ${item} de Agencia Nova.`);
+                          window.open(`https://wa.me/5491112345678?text=${message}`, '_blank');
+                        }
+                      }}
+                      className="text-gray-300 hover:text-blue-400 transition-colors text-sm text-left"
+                    >
                       {item}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -288,15 +312,33 @@ const Footer = () => {
                 © 2025 Agencia Nova. Todos los derechos reservados.
               </p>
               <div className="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                <button 
+                  onClick={() => {
+                    const message = encodeURIComponent("¡Hola! Me gustaría conocer la política de privacidad de Agencia Nova.");
+                    window.open(`https://wa.me/5491112345678?text=${message}`, '_blank');
+                  }}
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
                   Política de Privacidad
-                </a>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                </button>
+                <button 
+                  onClick={() => {
+                    const message = encodeURIComponent("¡Hola! Me gustaría conocer los términos de servicio de Agencia Nova.");
+                    window.open(`https://wa.me/5491112345678?text=${message}`, '_blank');
+                  }}
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
                   Términos de Servicio
-                </a>
-                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
+                </button>
+                <button 
+                  onClick={() => {
+                    const message = encodeURIComponent("¡Hola! Me gustaría conocer la política de cookies de Agencia Nova.");
+                    window.open(`https://wa.me/5491112345678?text=${message}`, '_blank');
+                  }}
+                  className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                >
                   Cookies
-                </a>
+                </button>
               </div>
             </div>
             <div className="mt-4 text-center">

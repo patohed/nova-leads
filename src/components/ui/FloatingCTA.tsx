@@ -28,7 +28,7 @@ const FloatingCTA = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("¡Hola! Quiero saber más sobre sus servicios de generación de leads. ¿Podrían ayudarme?");
+    const message = encodeURIComponent("¡Hola! Quiero saber más sobre los servicios de marketing digital de Agencia Nova. ¿Podrían ayudarme?");
     window.open(`https://wa.me/5491112345678?text=${message}`, '_blank');
   };
 

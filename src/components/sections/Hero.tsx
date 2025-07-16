@@ -212,7 +212,10 @@ const Hero = () => {
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-6 py-3 group"
-                  onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => {
+                    const message = encodeURIComponent("¡Hola! Me interesa conocer más sobre los servicios de Agencia Nova. ¿Podrían ayudarme?");
+                    window.open(`https://wa.me/5491112345678?text=${message}`, '_blank');
+                  }}
                 >
                   Empezar ahora
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />

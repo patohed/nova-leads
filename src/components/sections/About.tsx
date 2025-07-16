@@ -200,7 +200,14 @@ const About = () => {
           <p className="text-gray-600 mb-6">
             Únete a más de 180 empresas que ya multiplicaron sus resultados con nosotros
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white">
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white"
+            onClick={() => {
+              const message = encodeURIComponent("¡Hola! Me interesa comenzar con los servicios de Agencia Nova. ¿Podrían contarme más?");
+              window.open(`https://wa.me/5491112345678?text=${message}`, '_blank');
+            }}
+          >
             Comenzar Ahora - Sin Riesgo
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
