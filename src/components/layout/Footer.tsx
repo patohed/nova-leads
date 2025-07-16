@@ -19,8 +19,8 @@ import StatsWidget from "@/components/ui/StatsWidget";
 
 const Footer = () => {
   const contactInfo = {
-    email: "contacto@agencianova.com.ar",
-    emailSecondary: "hola@agencianova.com.ar",
+    email: "contacto@agencia-nova.com.ar",
+    emailSecondary: "hola@agencia-nova.com.ar",
     phone: "+54 11 4567-8900",
     whatsapp: "+54 9 11 4567-8900",
     address: "Av. Santa Fe 1234, Piso 8°, C1059 CABA, Buenos Aires, Argentina"

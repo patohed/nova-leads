@@ -49,10 +49,10 @@ const Contact = () => {
       icon: Mail,
       title: 'Email',
       subtitle: 'Respuesta en 24hs',
-      value: 'hola@agencianova.com',
+      value: 'contacto@agencia-nova.com.ar',
       action: 'Enviar email',
       color: 'from-red-500 to-orange-500',
-      href: 'mailto:hola@agencianova.com'
+      href: 'mailto:contacto@agencia-nova.com.ar'
     }
   ]
 
@@ -85,18 +85,35 @@ const Contact = () => {
     setIsSubmitting(true)
     
     try {
-      // Simular envío del formulario
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      setSubmitSuccess(true)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: ''
-      })
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          service: 'Marketing Digital' // Puedes hacer esto dinámico si tienes un selector de servicios
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitSuccess(true)
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: ''
+        })
+      } else {
+        throw new Error(result.message || 'Error al enviar el formulario')
+      }
     } catch (error) {
       console.error('Error:', error)
+      // Aquí podrías mostrar un mensaje de error al usuario
+      alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo o contáctanos por WhatsApp.')
     } finally {
       setIsSubmitting(false)
     }
@@ -355,10 +372,16 @@ const Contact = () => {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="w-full bg-green-500 text-white text-lg py-4 rounded-lg flex items-center justify-center gap-2"
+                    className="w-full bg-green-500 text-white text-lg py-4 rounded-lg"
                   >
-                    <CheckCircle className="w-5 h-5" />
-                    ¡Mensaje enviado! Te contactaremos pronto
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <CheckCircle className="w-5 h-5" />
+                      ¡Mensaje enviado exitosamente!
+                    </div>
+                    <p className="text-sm text-center opacity-90">
+                      Hemos enviado una confirmación a tu email.<br/>
+                      Te contactaremos dentro de las próximas 24 horas.
+                    </p>
                   </motion.div>
                 ) : (
                   <Button
